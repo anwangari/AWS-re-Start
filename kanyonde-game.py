@@ -1,9 +1,11 @@
 '''
 Kenyonde Game Implementation
+Instruction: The user is given three trials to guess the correct secret number
 '''
 
 import random
 
+# Generate a random secret number
 secret_number = random.randint(1, 9)
 
 counter = 0
