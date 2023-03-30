@@ -5,5 +5,5 @@ THE CHALLANGE
 3. Format the response message as follows:
       "The word count in the file <textFileName> is <WordCount>."
 4. Specify the email subject line as:
-      "Word Count Result"
+      "New Upload in your S3 Bucket"
 5. Automatically trigger the function when the text file is uploaded to an Amazon S3 bucket
