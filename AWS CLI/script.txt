@@ -1,0 +1,3 @@
+# CLI code to retrieve IAM User policy document and save the output in a json file
+
+aws iam get-policy-version --policy-arn arn:aws:iam::350105258290:policy/lab_policy --version-id v1 --query 'PolicyVersion.Document.Statement' --output json > policystatement.json
