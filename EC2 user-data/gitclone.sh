@@ -3,6 +3,9 @@
 # Update the package index and upgrade existing packages
 sudo yum update -y
 
+# Install Git
+sudo yum install git -y
+
 # Install Apache (httpd)
 sudo yum install httpd -y
 
@@ -15,18 +18,17 @@ sudo systemctl enable httpd
 # Check the status of Apache
 sudo systemctl status httpd
 
-# Install Git
-sudo apt update
-sudo apt install git -y
-
 # Navigate to the desired directory
 cd /var/www/html
 
 # Clone the repository
 git clone https://github.com/nsevindi87/multipage-website.git
 
-# Change ownership of the cloned directory to the web server user
-sudo chown -R www-data:www-data multipage-website
+# move website content into the right directory
+sudo mv multipage-website/* .
+
+# delete the empty multipage-website directory
+sudo rmdir multipage-website
 
 # Adjust directory permissions. '755' allows the web server to read and execute the files, while still restricting write access to maintain security.
-sudo chmod -R 755 multipage-website
+sudo chmod 755 /var/www/html
