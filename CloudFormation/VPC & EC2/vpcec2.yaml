@@ -64,7 +64,7 @@ Resources:
   DefaultRoute:
     Type: AWS::EC2::Route
     DependsOn:
-      - PublicRouteTable
+      - RouteTable
       - VPCGatewayAttachment 
     Properties:
       RouteTableId: !Ref RouteTable
