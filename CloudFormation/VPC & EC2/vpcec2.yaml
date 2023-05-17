@@ -32,6 +32,7 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       InternetGatewayId: !Ref IGW
+      
 #####
 # Public Subnet
 #####
@@ -78,6 +79,7 @@ Resources:
     Properties:
       SubnetId: !Ref PublicSubnet
       RouteTableId: !Ref RouteTable
+      
 #####
 # Security Group
 #####
@@ -100,3 +102,29 @@ Resources:
       Tags:
         - Key: Name
           Value: Trial Security Group
+
+#####
+# EC2 Instance
+#####
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    DependsOn: SecurityGroup
+    Properties:
+      ImageId: ami-04e914639d0cca79a
+      InstanceType: t2.micro
+      KeyName: TonyKP.ppk
+      SecurityGroupIds:
+        - !Ref SecurityGroup
+      SubnetId: !Ref PublicSubnet
+      AssociatePublicIpAddress: true
+      UserData:
+        Fn::Base64: |
+          #!/bin/bash
+          sudo yum update -y
+          sudo yum install httpd -y
+          sudo systemctl start httpd
+          sudo systemctl enable httpd
+      Tags:
+        - Key: Name
+          Value: TrialServer
