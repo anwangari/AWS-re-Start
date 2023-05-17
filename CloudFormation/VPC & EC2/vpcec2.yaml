@@ -123,7 +123,7 @@ Resources:
           sudo yum install httpd -y
           sudo systemctl start httpd
           sudo systemctl enable httpd
-          echo "Congratulations Tony for Creating your First CloudFormation Template"
+          echo "Congratulations Tony for Creating your First CloudFormation Template" | sudo tee /var/www/html/index.html
       Tags:
         - Key: Name
           Value: TrialServer
