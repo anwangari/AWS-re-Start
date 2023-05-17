@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: TrialVPC with EC2 instance (TrialServer) tamplete
+Description: TrialVPC with EC2 instance (TrialServer) template
 
 Resources:
 
