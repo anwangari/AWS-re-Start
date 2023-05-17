@@ -113,7 +113,6 @@ Resources:
     Properties:
       ImageId: ami-04e914639d0cca79a
       InstanceType: t2.micro
-      KeyName: TonyKP.ppk
       SecurityGroupIds:
         - !Ref SecurityGroup
       SubnetId: !Ref PublicSubnet
