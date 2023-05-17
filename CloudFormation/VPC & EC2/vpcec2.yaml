@@ -117,7 +117,6 @@ Resources:
       SecurityGroupIds:
         - !Ref SecurityGroup
       SubnetId: !Ref PublicSubnet
-      AssociatePublicIpAddress: true
       UserData:
         Fn::Base64: |
           #!/bin/bash
