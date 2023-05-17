@@ -125,6 +125,7 @@ Resources:
           sudo yum install httpd -y
           sudo systemctl start httpd
           sudo systemctl enable httpd
+          echo "Congratulations Tony for Creating your First CloudFormation Template"
       Tags:
         - Key: Name
           Value: TrialServer
