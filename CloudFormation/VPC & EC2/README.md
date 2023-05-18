@@ -39,4 +39,9 @@ Please note that deleting the stack will remove all the resources provisioned by
 ## Conclusion
 This template serves as a starting point for building more complex infrastructure configurations using AWS CloudFormation.
 
-For detailed information about the template and its resources, refer to the **trial-vpc-ec2-template.yaml** file and the AWS CloudFormation documentation.
+## Contact
+
+For any questions or suggestions, please contact:
+
+- [Anthony Njuguna](mailto:antonnm7@gmail.com)
+
