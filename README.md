@@ -1,2 +1,2 @@
 # AWS-re-Start
-This repository is for AWS related code
+This repository is for AWS related work
